@@ -7,7 +7,6 @@ jobs:
         steps:
             - checkout
             - run: gradle build
-            - run: gradle jar
             - run: gradle run
             - store_artifacts:
                 path: build/distributions
