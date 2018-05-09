@@ -1,0 +1,10 @@
+version: 2.0
+
+jobs:
+    build:
+        docker:
+            - image: circleci/openjdk:9-jdk-sid-node-browsers
+        steps:
+            - checkout
+            - run: gradle build
+            - run: gradle run
