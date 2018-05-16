@@ -23,7 +23,7 @@ mainClassName = 'com.java_gradle_circleci.Main'
 
 testlogger {
     // pick a theme - mocha, standard or plain
-    theme 'standard'
+    theme 'mocha'
 
     // set to false to disable detailed failure logs
     showExceptions true
