@@ -14,6 +14,10 @@ public class Main {
     }
 
 
+    public static int getRandomNumber() {
+        return 4;
+    }
+
     public static void main(String[] args) throws IOException {
         System.out.println("Hello");
         Parser parser = Parser.builder().build();
