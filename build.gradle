@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id "com.adarshr.test-logger" version "1.2.0"
 }
 
 group 'com.java_gradle_circleci'
@@ -19,3 +20,20 @@ dependencies {
 apply plugin: 'application'
 
 mainClassName = 'com.java_gradle_circleci.Main'
+
+testlogger {
+    // pick a theme - mocha, standard or plain
+    theme 'standard'
+
+    // set to false to disable detailed failure logs
+    showExceptions true
+
+    // set threshold in milliseconds to highlight slow tests
+    slowThreshold 1000
+
+    // displays a breakdown of passes, failures and skips along with total duration
+    showSummary true
+
+    // enable to see standard out and error streams inline with the test results
+    showStandardStreams false
+}
