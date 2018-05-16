@@ -4,10 +4,8 @@ import junit.framework.TestCase;
 
 import static org.junit.Assert.*;
 
-import com.java_gradle_circleci.Main;
-
 public class JavaTestCase extends TestCase {
-    protected int value1, value2;
+    private int value1, value2;
 
     // assigning the values
     protected void setUp(){
@@ -17,13 +15,13 @@ public class JavaTestCase extends TestCase {
 
     // test method to add two values
     public void testAdd(){
-        double result = value1 + value2;
-        assertTrue(result == 6);
+        int result = value1 + value2;
+        assertEquals(6, result);
     }
     // test method to subtract two values
     public void testSubtract(){
-        double result = value1 - value2;
-        assertTrue(result == 0);
+        int result = value1 - value2;
+        assertEquals(0, result);
     }
 
     public void testReadFile() {
@@ -31,7 +29,7 @@ public class JavaTestCase extends TestCase {
             String result = Main.readFile("README.md");
             assertNotEquals(result, "");
         } catch (Exception e) {
-            assertTrue(false);
+            fail();
         }
     }
 
